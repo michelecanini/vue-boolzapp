@@ -112,7 +112,6 @@ body{
 }
 
 .alert_notification{
-    height: 7vh;
     display: inline-block;
 }
 
@@ -135,5 +134,23 @@ body{
 .text_alert {
     display: inline-block;
     font-size: 12px ;
+}
+
+.form_cotrol{
+    width: 100%;
+}
+
+.icon_search{
+    position: relative;
+    text-align: center;
+    background-color: white;
+    border: 1px solid rgb(163, 163, 163);
+}
+
+.icon_search i{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(163, 163, 163);
 }
 
