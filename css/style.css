@@ -64,3 +64,9 @@ body{
     width: 100%;
     background-color: rgb(255, 0, 200);
 }
+
+.chat_footer{
+    height: 10vh;
+    width: 100%;
+    background-color: yellow;
+}
