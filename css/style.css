@@ -36,9 +36,9 @@ body{
 }
 
 .sidebar_list_header{
-    height: 10vh;
+    height: 7vh;
     width: 100%;
-    background-color: rgb(0, 255, 191);
+    background-color: rgb(224, 224, 224);
 }
 
 .chat_message_header{
@@ -60,7 +60,7 @@ body{
 }
 
 .sidebar_main{
-    height: 65vh;
+    height: 68vh;
     width: 100%;
     background-color: rgb(255, 0, 200);
 }
@@ -75,4 +75,15 @@ body{
     height: 10vh;
     width: 100%;
     background-color: yellow;
+}
+
+.user_contact, .icon_right{
+    height: 7vh;
+    width: 100px;
+    background-color: rgb(214, 38, 38);
+}
+
+.avatar{
+    height: 100%;
+    border-radius: 50%;
 }
