@@ -53,8 +53,14 @@ body{
     background-color: rgb(255, 17, 0);
 }
 
+.search_bar_contact{
+    height: 5vh;
+    width: 100%;
+    background-color: yellow;
+}
+
 .sidebar_main{
-    height: 70vh;
+    height: 65vh;
     width: 100%;
     background-color: rgb(255, 0, 200);
 }
