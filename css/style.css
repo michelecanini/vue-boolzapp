@@ -77,13 +77,37 @@ body{
     background-color: yellow;
 }
 
-.user_contact, .icon_right{
+.user_contact, .menu_list_right{
     height: 7vh;
-    width: 100px;
+    width: 120px;
     background-color: rgb(214, 38, 38);
+    display: inline-block;
+}
+
+.menu_list_right{
+    position: relative;
+}
+
+.icon li{
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.icon{
+    position: absolute;
+    top: 50%;
+    right: -30%;
+    transform: translate(-50%, -50%);
+}
+
+.icon a{
+    margin-right: 10px;
+    color: rgb(163, 163, 163);
 }
 
 .avatar{
     height: 100%;
     border-radius: 50%;
+    display: inline-block;
 }
