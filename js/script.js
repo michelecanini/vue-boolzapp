@@ -7,8 +7,6 @@ createApp({
         data(){                                
             return{           
 
-                // variabile del contatto attivo
-                activeIndex: 0,
                 // array dei contatti
                 contacts: [
                     {
@@ -172,8 +170,9 @@ createApp({
                             }
                         ],
                     }
-                ]
-                
+                ],
+
+                activeIndex: 0,
                 
             }     
         },
