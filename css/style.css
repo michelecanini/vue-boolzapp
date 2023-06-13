@@ -68,7 +68,8 @@ body{
 .chat_main{
     height: 70vh;
     width: 100%;
-    background-color: rgb(255, 0, 200);
+    background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
 }
 
 .chat_footer{
