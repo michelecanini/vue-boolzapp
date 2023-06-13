@@ -66,16 +66,16 @@ body{
 }
 
 .chat_main{
-    height: 70vh;
+    height: 75vh;
     width: 100%;
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
 }
 
 .chat_footer{
-    height: 10vh;
+    height: 7vh;
     width: 100%;
-    background-color: yellow;
+    background-color: rgb(224, 224, 224);
 }
 
 .user_contact, .menu_list_right{
