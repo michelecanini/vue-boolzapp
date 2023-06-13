@@ -6,7 +6,9 @@ const {createApp} = Vue;
 createApp({
         data(){                                
             return{           
-                
+
+                // variabile del contatto attivo
+                activeIndex: 0,
                 // array dei contatti
                 contacts: [
                     {
@@ -172,6 +174,11 @@ createApp({
                     }
                 ]
                 
+                
             }     
+        },
+
+        methods: {
         }
+
 }).mount('#app');                        
