@@ -71,7 +71,7 @@
 
                     <!--main sidebar-->
                     <main class="sidebar_main">
-                        <div class="sidebar_card d-flex justify-content-between">
+                        <div class="sidebar_card d-flex justify-content-between" v-for="(contact_user, index) in contacts">
                             <div class="col-10 user_contact d-flex user_card">
                                 <img src="./img/avatar_1.jpg" alt="avatar_1" class="avatar">
                                 <div>
@@ -82,7 +82,6 @@
                             <div class="col-2">
                                 <p>12.00</p>
                             </div>
-
                         </div>
                     </main>
 
