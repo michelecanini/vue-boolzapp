@@ -173,11 +173,12 @@ createApp({
                 ],
 
                 activeIndex: 0,
-                
+                receivedClass: 'bg_color_white',
+                newMessage: "",
             }     
         },
 
         methods: {
         }
-
+        
 }).mount('#app');                        

@@ -71,7 +71,7 @@
 
                     <!--main sidebar-->
                     <main class="sidebar_main">
-                        <div class="sidebar_card d-flex justify-content-between" v-for="(contact_user, index) in contacts" @click="activeIndex = index">
+                        <div class="sidebar_card d-flex justify-content-between" v-for="(contact_user, index) in contacts" v-bind:class="activeIndex === index ? 'active' : ''" @click="activeIndex = index">
                             <div class="col-10 user_contact d-flex user_card">
                                 <img v-bind:src="contacts[index].avatar" alt="avatar_1" class="avatar">
                                 <div>
@@ -113,42 +113,25 @@
 
                     <!--main chat message-->
                     <main class="chat_main">
-                        <div class="chat_message_cont d-flex justify-content-end">
-                            <div class="message_green d-flex justify-content-between">
-                                <div class="h-100 d-flex align-item-center">
-                                    <p>Hai portato a spasso il cane?</p>
-                                </div>
-                                <div class="h-100 d-flex align-item-end">
-                                    <p>15.30</p>
-                                </div>
 
+                        <div v-if="contacts[activeIndex].messages.length < 1" class="chat_message_cont d-flex"></div>
+                        <div v-else="" class="chat_message_cont d-flex " v-bind:class="contacts[activeIndex].messages[i].status == 'received' ? 'justify-content-start' : 'justify-content-end' " v-for="(message, i) in contacts[activeIndex].messages">
+
+                            <div v-if="contacts[activeIndex].messages.length < 1" class="chat_message d-flex justify-content-between"></div>
+                            <div v-else class="message_green d-flex justify-content-between" v-bind:class="contacts[activeIndex].messages[i].status == 'received' ? receivedClass : ''">
+                                
+                                <div class="h-100 d-flex align-item-center">
+                                    <p v-if="contacts[activeIndex].messages.length < 1" class="m-0"></p>
+                                    <p v-else > {{contacts[activeIndex].messages[i].message}}</p>
+                                </div>
+                                <div class="h-100 d-flex align-item-end justify-content-between">
+
+                                    <p v-if="contacts[activeIndex].messages.length < 1" class="m-0""></p>
+                                    <p v-else >{{contacts[activeIndex].messages[i].date}}</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="chat_message_cont d-flex justify-content-end">
-                            <div class="message_green d-flex justify-content-between">
-                                <div class="h-100 d-flex align-item-center">
-                                    <p>Ricordati di stendere i panni</p>
-                                </div>
-                                <div class="h-100 d-flex align-item-end">
-                                    <p>15.30</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="chat_message_cont d-flex justify-content-start">
-                            <div class="message_white d-flex justify-content-between">
-                                <div class="h-100 d-flex align-item-center">
-                                    <p>Tutto Fatto!</p>
-                                </div>
-                                <div class="h-100 d-flex align-item-end">
-                                    <p>15.30</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        
-                        
-                    </main>
+                    </main> 
 
                     <!--footer chat message-->
                     <footer class="chat_footer container ">
@@ -157,7 +140,7 @@
                                 <a href="#"><i class="fa-regular fa-face-smile"></i></a>
                             </div>
                             <div class="col-10 mt-3 mb-2">
-                                <input type="text" name="" id="" class="form_cotrol" placeholder="Scrivi un messaggio">
+                                <input type="text" class="form_cotrol" placeholder="Scrivi un messaggio">
                             </div>
                             <div class="col-1 mt-3 mb-2">
                                 <a href="#"><i class="fa-solid fa-microphone"></i></a>

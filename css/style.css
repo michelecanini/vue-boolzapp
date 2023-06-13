@@ -38,6 +38,7 @@ body{
     background-color: rgb(213, 249, 182);
     padding-left: 15px;
     padding-right: 40px;
+    padding-top: 15px;
     border-radius: 10px;
 }
 
@@ -71,7 +72,7 @@ body{
 
 .search_bar_contact{
     width: 100%;
-    background-color: yellow;
+    background-color: rgb(224, 224, 224);
 }
 
 .sidebar_main{
@@ -182,6 +183,14 @@ body{
     width: 250px;
 }
 
+.active{
+    background-color: rgb(212, 212, 212);
+}
+
 .sidebar_card:hover{
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(236, 236, 236);
+}
+
+.bg_color_white{
+    background-color: white;
 }
