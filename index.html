@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                             <div class="col-2">
-                                <p class="text_alert">{{contacts[index].messages.at(-1).date}}</p>
+                                <p class="text_alert">{{contacts[index].messages.at(-1).date.substring(10, 16)}}</p>
                             </div>
                         </div>
                     </main>
@@ -95,9 +95,9 @@
                         <header class="chat_message_header container">
                             <div class="row d-flex justify-content-between">
                                 <div class="col-8 mt-1 mb-1 user_contact d-flex user_card">
-                                    <img src="./img/avatar_1.jpg" alt="avatar_1" class="avatar">
+                                    <img v-bind:src="contacts[activeIndex].avatar" alt="avatar_image" class="avatar">
                                     <div>
-                                        <h6 class="m-0">Michele</h6>
+                                        <h6 class="m-0">{{contacts[activeIndex].name}}</h6>
                                         <p class="text_alert">Ultimo accesso oggi alle 12.00</p>
                                     </div>
                                 </div>
@@ -127,7 +127,7 @@
                                 <div class="h-100 d-flex align-item-end justify-content-between">
 
                                     <p v-if="contacts[activeIndex].messages.length < 1" class="m-0""></p>
-                                    <p v-else >{{contacts[activeIndex].messages[i].date}}</p>
+                                    <p v-else >{{contacts[activeIndex].messages[i].date.substring(10, 16)}}</p>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                                 <a href="#"><i class="fa-regular fa-face-smile"></i></a>
                             </div>
                             <div class="col-10 mt-3 mb-2">
-                                <input type="text" class="form_cotrol" placeholder="Scrivi un messaggio">
+                                <input type="text" class="form_cotrol" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage()">
                             </div>
                             <div class="col-1 mt-3 mb-2">
                                 <a href="#"><i class="fa-solid fa-microphone"></i></a>

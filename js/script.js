@@ -179,6 +179,31 @@ createApp({
         },
 
         methods: {
+            sendMessage(){
+                let sendOneMessage = {
+                    date: '13/06/2023 09:30:00',
+                    message: this.newMessage,
+                    status: 'sent'
+                };
+
+                this.contacts[this.activeIndex].messages.push(sendOneMessage);
+
+                this.newMessage = '';
+
+                this.autoReply();
+
+            },
+
+            autoReply(){
+                setTimeout(() => {    
+                    let sendOneMessage = {
+                        date: '13/06/2023 09:30:01',
+                        message: 'ok',
+                        status: 'received'
+                    };
+
+                    this.contacts[this.activeIndex].messages.push(sendOneMessage)
+                }, 1000);
+            },
         }
-        
 }).mount('#app');                        
