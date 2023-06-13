@@ -36,25 +36,21 @@ body{
 }
 
 .sidebar_list_header{
-    height: 7vh;
     width: 100%;
     background-color: rgb(224, 224, 224);
 }
 
 .chat_message_header{
-    height: 7vh;
     width: 100%;
     background-color: rgb(224, 224, 224);
 }
 
 .topbar_alert{
-    height: 8vh;
     width: 100%;
     background-color: rgb(2, 179, 164);
 }
 
 .search_bar_contact{
-    height: 5vh;
     width: 100%;
     background-color: yellow;
 }
@@ -73,7 +69,6 @@ body{
 }
 
 .chat_footer{
-    height: 7vh;
     width: 100%;
     background-color: rgb(224, 224, 224);
 }
