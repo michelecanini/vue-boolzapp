@@ -175,7 +175,6 @@ createApp({
                 activeIndex: 0,
                 receivedClass: 'bg_color_white',
                 newMessage: "",
-                newSearch: "",
             }     
         },
 
@@ -198,7 +197,7 @@ createApp({
             autoReply(){
                 setTimeout(() => {    
                     let sendOneMessage = {
-                        date: '13/06/2023 09:30:01',
+                        date: '13/06/2023 09:31:00',
                         message: 'ok',
                         status: 'received'
                     };
@@ -206,7 +205,5 @@ createApp({
                     this.contacts[this.activeIndex].messages.push(sendOneMessage)
                 }, 1000);
             },
-
-            searchBarUser(){}
         }
 }).mount('#app');                        

@@ -32,7 +32,7 @@
                         <div class="row d-flex justify-content-between no-gutters">
                             <div class="col-6 user_contact mt-1 mb-1 ">
                                 <img src="./img/avatar_io.jpg" alt="avatar_1" class="avatar">
-                                <span>Sofia</span>
+                                <span class="text_name ms-2">Sofia</span>
                             </div>
                             <div class="col-6 menu_list_right mt-1 mb-1">
                                 <ul class="icon">
@@ -64,7 +64,7 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
                             <div class="col-10 p-0 mt-1 mb-1">
-                                <input type="search" name="" id="" placeholder="Cerca o inizia una nuova chat" class="form_cotrol p_left">
+                                <input type="search" placeholder="Cerca o inizia una nuova chat" class="form_cotrol p_left">
                             </div>
                         </div>
                     </div>
@@ -75,12 +75,12 @@
                             <div class="col-10 user_contact d-flex user_card">
                                 <img v-bind:src="contacts[index].avatar" alt="avatar_1" class="avatar">
                                 <div>
-                                    <h6 class="m-0">{{contacts[index].name}}</h6>
-                                    <p class="text_alert">{{contacts[index].messages.at(-1).message}}</p>
+                                    <h6 class="text_name m-0 ms-3">{{contacts[index].name}}</h6>
+                                    <p class="text_sub_message ms-3">{{contacts[index].messages.at(-1).message}}</p>
                                 </div>
                             </div>
                             <div class="col-2">
-                                <p class="text_alert">{{contacts[index].messages.at(-1).date.substring(10, 16)}}</p>
+                                <p class="text_sub_message">{{contacts[index].messages.at(-1).date}}</p>
                             </div>
                         </div>
                     </main>
@@ -97,8 +97,8 @@
                                 <div class="col-8 mt-1 mb-1 user_contact d-flex user_card">
                                     <img v-bind:src="contacts[activeIndex].avatar" alt="avatar_image" class="avatar">
                                     <div>
-                                        <h6 class="m-0">{{contacts[activeIndex].name}}</h6>
-                                        <p class="text_alert">Ultimo accesso oggi alle 12.00</p>
+                                        <h6 class="text_name mt-2 m-0 ms-3">{{contacts[activeIndex].name}}</h6>
+                                        <p class="text_sub_message ms-3">Ultimo accesso oggi alle 12.00</p>
                                     </div>
                                 </div>
                                 <div class="col-4 mt-1 mb-1 menu_list_right">
@@ -128,7 +128,7 @@
                                 </div>
                                 <div class="h-100 d-flex align-item-end justify-content-between">
                                     <p v-if="contacts[activeIndex].messages.length < 1" class="m-0""></p>
-                                    <p v-else >{{contacts[activeIndex].messages[i].date.substring(10, 16)}}</p>
+                                    <p class="text_sub_message ms-5 pt-4 margin_b_date" v-else >{{contacts[activeIndex].messages[i].date.substring(10, 16)}}</p>
                                 </div>
                             </div>
                         </div>

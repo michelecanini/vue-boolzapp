@@ -33,7 +33,7 @@ body{
 .message_green{
     background-color: rgb(213, 249, 182);
     padding-left: 15px;
-    padding-right: 40px;
+    padding-right: 15px;
     padding-top: 15px;
     border-radius: 10px;
 }
@@ -97,9 +97,15 @@ body{
     margin-bottom: 10px; 
 }
 
-.user_contact, .menu_list_right{
+.user_contact {
     height: 60px;
-    width: 150px;
+    width: 200px;
+    display: inline-block;
+}
+
+.menu_list_right{
+    height: 60px;
+    width: 200px;
     display: inline-block;
 }
 
@@ -193,7 +199,7 @@ body{
 
 .user_card{
     height: 60px;
-    width: 250px;
+    width: 300px;
 }
 
 .active{
@@ -210,4 +216,18 @@ body{
 
 .icon i{
     font-size: 23px;
+}
+
+.text_name {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.text_sub_message {
+    font-size: 12px;
+    color: rgb(163 , 163, 163);
+}
+
+.margin_b_date{
+    margin-bottom: 0;
 }
