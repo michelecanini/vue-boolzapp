@@ -175,6 +175,7 @@ createApp({
                 activeIndex: 0,
                 receivedClass: 'bg_color_white',
                 newMessage: "",
+                newSearch: "",
             }     
         },
 
@@ -205,5 +206,7 @@ createApp({
                     this.contacts[this.activeIndex].messages.push(sendOneMessage)
                 }, 1000);
             },
+
+            searchBarUser(){}
         }
 }).mount('#app');                        
