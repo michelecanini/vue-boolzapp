@@ -15,17 +15,14 @@ body{
 }
 
 .app_box{
-    width: 80vw;
+    max-width: 1600px;
     margin: 15px auto;
-    height: 90vh;
-    background-color: red;   
 }
 
 .sidebar_left{
     height: 90vh;
     width: 40%;
-    border: 1px dashed black;
-    background-color: blue;
+    background-color: white;
 }
 
 .chat_message{
@@ -58,16 +55,20 @@ body{
 .sidebar_list_header{
     width: 100%;
     background-color: rgb(224, 224, 224);
+    padding: 5px 15px;
+    border-right: 1px solid rgb(197, 197, 197);
 }
 
 .chat_message_header{
     width: 100%;
     background-color: rgb(224, 224, 224);
+    padding: 5px 15px;
 }
 
 .topbar_alert{
     width: 100%;
     background-color: rgb(2, 179, 164);
+    padding: 5px 15px;
 }
 
 .search_bar_contact{
@@ -162,6 +163,7 @@ body{
     text-align: center;
     background-color: white;
     border: 1px solid rgb(163, 163, 163);
+    
 }
 
 .icon_search i{

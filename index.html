@@ -22,14 +22,14 @@
         <div id="app">
 
             <div class="container app_box">
-                <div class="row">
+                <div class="row g-0">
 
                 <!--start sidebar left-->
                 <div class="col-4 sidebar_left">
 
                     <!--header sidebar-->
                     <header class="sidebar_list_header container">
-                        <div class="row d-flex justify-content-between">
+                        <div class="row d-flex justify-content-between no-gutters">
                             <div class="col-6 user_contact mt-1 mb-1">
                                 <img src="./img/avatar_io.jpg" alt="avatar_1" class="avatar">
                                 <span>Sofia</span>
@@ -59,8 +59,8 @@
 
                     <!--search bar contact-->
                     <div class="search_bar_contact container">
-                        <div class="row">
-                            <div class="col-2 p-0 mt-1 mb-1 icon_search">
+                        <div class="row align-item-center justify-content-center">
+                            <div class="col-1 p-0 mt-1 mb-1 icon_search">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
                             <div class="col-10 p-0 mt-1 mb-1">
@@ -115,17 +115,18 @@
                     <main class="chat_main">
 
                         <div v-if="contacts[activeIndex].messages.length < 1" class="chat_message_cont d-flex"></div>
+
                         <div v-else="" class="chat_message_cont d-flex " v-bind:class="contacts[activeIndex].messages[i].status == 'received' ? 'justify-content-start' : 'justify-content-end' " v-for="(message, i) in contacts[activeIndex].messages">
 
                             <div v-if="contacts[activeIndex].messages.length < 1" class="chat_message d-flex justify-content-between"></div>
+
                             <div v-else class="message_green d-flex justify-content-between" v-bind:class="contacts[activeIndex].messages[i].status == 'received' ? receivedClass : ''">
-                                
+
                                 <div class="h-100 d-flex align-item-center">
                                     <p v-if="contacts[activeIndex].messages.length < 1" class="m-0"></p>
                                     <p v-else > {{contacts[activeIndex].messages[i].message}}</p>
                                 </div>
                                 <div class="h-100 d-flex align-item-end justify-content-between">
-
                                     <p v-if="contacts[activeIndex].messages.length < 1" class="m-0""></p>
                                     <p v-else >{{contacts[activeIndex].messages[i].date.substring(10, 16)}}</p>
                                 </div>
