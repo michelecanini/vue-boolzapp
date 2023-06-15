@@ -172,14 +172,26 @@ createApp({
                     }
                 ],
 
+                // variabili vuejs
+
+                // indice della chat attiva
                 activeIndex: 0,
+
+                // classe messaggio white
                 receivedClass: 'bg_color_white',
+
+                // input del nuovo messaggio
                 newMessage: "",
+
+                // input della nuova ricerca
                 newSearch: "",
             }     
         },
 
+        // methods ambiente delle funzioni
         methods: {
+
+            // funzione di invio del nuovo messaggio
             sendMessage(){
                 let sendOneMessage = {
                     date: '13/06/2023 09:30:00',
@@ -190,9 +202,10 @@ createApp({
                 this.contacts[this.activeIndex].messages.push(sendOneMessage);
                 this.newMessage = '';
                 this.autoReply();
-                
+
             },
 
+            // funzione del messaggio di risposta white
             autoReply(){
                 setTimeout(() => {    
                     let sendOneMessage = {
@@ -205,6 +218,7 @@ createApp({
                 }, 1000);
             },
 
+            // funzione della nuova ricerca chat
             newSearchList(){
                 this.contacts.forEach((element) => {
                     if(element.name.toLowerCase().includes(this.newSearch.toLowerCase())) {
