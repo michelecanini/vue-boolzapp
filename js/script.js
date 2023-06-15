@@ -175,6 +175,7 @@ createApp({
                 activeIndex: 0,
                 receivedClass: 'bg_color_white',
                 newMessage: "",
+                newSearch: "",
             }     
         },
 
@@ -187,11 +188,9 @@ createApp({
                 };
 
                 this.contacts[this.activeIndex].messages.push(sendOneMessage);
-
                 this.newMessage = '';
-
                 this.autoReply();
-
+                
             },
 
             autoReply(){
@@ -205,5 +204,15 @@ createApp({
                     this.contacts[this.activeIndex].messages.push(sendOneMessage)
                 }, 1000);
             },
+
+            newSearchList(){
+                this.contacts.forEach((element) => {
+                    if(element.name.toLowerCase().includes(this.newSearch.toLowerCase())) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    }
+                });
+            }
         }
-}).mount('#app');                        
+}).mount('#app');

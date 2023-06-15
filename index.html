@@ -64,14 +64,14 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
                             <div class="col-10 p-0 mt-1 mb-1">
-                                <input type="search" placeholder="Cerca o inizia una nuova chat" class="form_cotrol p_left">
+                                <input type="search" placeholder="Cerca o inizia una nuova chat" class="form_cotrol p_left" v-model="newSearch" @keyup="newSearchList()">
                             </div>
                         </div>
                     </div>
 
                     <!--main sidebar-->
                     <main class="sidebar_main">
-                        <div class="sidebar_card d-flex justify-content-between" v-for="(contact_user, index) in contacts" v-bind:class="activeIndex === index ? 'active' : ''" @click="activeIndex = index">
+                        <div class="sidebar_card d-flex justify-content-between" v-bind:class="contacts[index].visible == false ? 'd-none': '' || activeIndex === index ? 'active' : ''" v-for="(contact_user, index) in contacts" @click="activeIndex = index">
                             <div class="col-10 user_contact d-flex user_card">
                                 <img v-bind:src="contacts[index].avatar" alt="avatar_1" class="avatar">
                                 <div>
