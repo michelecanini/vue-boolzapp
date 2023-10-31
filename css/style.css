@@ -22,6 +22,8 @@ body{
 
 .sidebar_left{
     width: 40%;
+    min-height: 100%;
+    position: relative;
 }
 
 .chat_message{
@@ -78,10 +80,12 @@ body{
 .sidebar_main{
     width: 100%;
     background-color: white;
+    overflow-y: scroll;
+    height: 70vh
 }
 
 .chat_main{
-    height: calc(100% - 70px - 70px);
+    height: 80vh;
     width: 100%;
     background-image: url(../img/mine.jpg);
     padding: 60px;
@@ -94,7 +98,6 @@ body{
     position: fixed;
     bottom: 0;
     position: absolute;
-    margin-bottom: 10px; 
 }
 
 .user_contact {
@@ -230,4 +233,11 @@ body{
 
 .margin_b_date{
     margin-bottom: 0;
+}
+
+.sidebar_footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    position: absolute;
 }

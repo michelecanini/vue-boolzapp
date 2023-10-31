@@ -25,8 +25,7 @@
                 <div class="row g-0">
 
                 <!--start sidebar left-->
-                <div class="col-4 sidebar_left">
-
+                <div class="col-12 col-md-4 sidebar_left">
                     <!--header sidebar-->
                     <header class="sidebar_list_header container">
                         <div class="row d-flex justify-content-between no-gutters">
@@ -85,6 +84,15 @@
                         </div>
                     </main>
 
+                    <!--footer sidebar-->
+                    <footer class="container sidebar_footer">
+                        <div class="row g-0">
+                            <div class="col-12 col-md-4"></div>  
+                        </div>
+                    </footer>
+
+                
+
                 </div>
                 <!--end sidebar left-->
                 
@@ -115,13 +123,9 @@
                     <main class="chat_main">
 
                         <div v-if="contacts[activeIndex].messages.length < 1" class="chat_message_cont d-flex"></div>
-
                         <div v-else="" class="chat_message_cont d-flex " v-bind:class="contacts[activeIndex].messages[i].status == 'received' ? 'justify-content-start' : 'justify-content-end' " v-for="(message, i) in contacts[activeIndex].messages">
-
                             <div v-if="contacts[activeIndex].messages.length < 1" class="chat_message d-flex justify-content-between"></div>
-
                             <div v-else class="message_green d-flex justify-content-between" v-bind:class="contacts[activeIndex].messages[i].status == 'received' ? receivedClass : ''">
-
                                 <div class="h-100 d-flex align-item-center">
                                     <p v-if="contacts[activeIndex].messages.length < 1" class="m-0"></p>
                                     <p v-else > {{contacts[activeIndex].messages[i].message}}</p>
