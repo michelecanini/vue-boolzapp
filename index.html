@@ -145,14 +145,19 @@
                                 <a href="#" class="icon_footer"><i class="fa-regular fa-face-smile"></i></a>
                             </div>
                             <div class="col-10 mt-3 mb-2 ">
-                                <input type="text" class="form_cotrol" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage()">
-                            </div>
+                                <form @submit.prevent="sendMessage">
+                                    <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newMessage" @input="clearErrorMessage">
+                                </form>
+                            </div>                            
                             <div class="col-1 mt-3 mb-2 text-center">
                                 <a href="#" class="icon_footer"><i class="fa-solid fa-microphone"></i></a>
                             </div>
                         </div>
+                        <div>
+                            <p v-if="error_message" class="error-message">{{ error_message }}</p>
+                        </div>
                     </footer>
-
+                    
                 </div>
                 <!--end chat message-->
 

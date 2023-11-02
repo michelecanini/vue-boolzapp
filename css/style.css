@@ -242,3 +242,8 @@ body{
     bottom: 0;
     position: absolute;
 }
+
+.error-message {
+    color: red;
+    margin-left: 80px;
+}

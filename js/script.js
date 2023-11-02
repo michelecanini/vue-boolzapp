@@ -21,6 +21,9 @@ createApp({
 
                 // nuova ricerca
                 newSearch: "",
+
+                // messaggio di errore
+                error_message: "",
             }     
         },
 
@@ -28,6 +31,10 @@ createApp({
 
             // funzione di invio del nuovo messaggio
             sendMessage(){
+                if (this.newMessage.trim() === '') {
+                    this.error_message = 'Il campo non può essere vuoto';
+                    return;
+                }
                 let sendOneMessage = {
                     date: '13/06/2023 09:30:00',
                     message: this.newMessage,
@@ -36,8 +43,9 @@ createApp({
 
                 this.contacts[this.activeIndex].messages.push(sendOneMessage);
                 this.newMessage = '';
+                // azzera il messaggio di errore
+                this.error_message = '';
                 this.autoReply();
-
             },
 
             // funzione del messaggio di risposta
@@ -62,6 +70,11 @@ createApp({
                         element.visible = false;
                     }
                 });
+            },
+
+            // funzione che azzera il messaggio di errore
+            clearErrorMessage() {
+                this.error_message = '';
             }
         }
 }).mount('#app');
