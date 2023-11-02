@@ -31,16 +31,21 @@ createApp({
 
             // funzione di invio del nuovo messaggio
             sendMessage(){
+                // controlla se il campo è vuoto
                 if (this.newMessage.trim() === '') {
                     this.error_message = 'Il campo non può essere vuoto';
                     return;
+                }
+                // controlla se l'input supera i 50 caratteri
+                if (this.newMessage.length > 50) {
+                this.error_message = 'Il messaggio non può superare i 50 caratteri';
+                return;
                 }
                 let sendOneMessage = {
                     date: '13/06/2023 09:30:00',
                     message: this.newMessage,
                     status: 'sent'
                 };
-
                 this.contacts[this.activeIndex].messages.push(sendOneMessage);
                 this.newMessage = '';
                 // azzera il messaggio di errore
